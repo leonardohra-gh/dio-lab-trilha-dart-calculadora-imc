@@ -17,11 +17,15 @@ class Pessoa {
     _imc = _pesoEmKg / pow(_alturaEmMetros, 2);
   }
 
-  String getIMC() {
-    return "${_imc.toStringAsFixed(1)} (${_getFaixaIMC()})";
+  String getIMCComFaixa() {
+    return "${_imc.toStringAsFixed(1)} (${getFaixaIMC()})";
   }
 
-  String _getFaixaIMC() {
+  double getImc() {
+    return _imc;
+  }
+
+  String getFaixaIMC() {
     switch (_imc) {
       case > 40:
         return "Obesidade grau III";

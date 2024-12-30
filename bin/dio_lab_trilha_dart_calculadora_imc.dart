@@ -6,7 +6,7 @@ void main(List<String> arguments) {
   try {
     Pessoa pessoa = pedirPessoaParaUsuario();
     print(
-        "O IMC calculado com as informações passadas é de: ${pessoa.getIMC()}");
+        "O IMC calculado com as informações passadas é de: ${pessoa.getIMCComFaixa()}");
   } on ArgumentError catch (e) {
     print(e.message);
   }
